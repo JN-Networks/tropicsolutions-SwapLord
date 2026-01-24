@@ -1,0 +1,12 @@
+[Unit]
+Description=TropicSolutions SwapLord Service
+After=network.target
+
+[Service]
+ExecStart=/usr/local/bin/swaplord --config /etc/swaplord/config.yaml
+Restart=always
+User=swaplord
+Group=swaplord
+
+[Install]
+WantedBy=multi-user.target
