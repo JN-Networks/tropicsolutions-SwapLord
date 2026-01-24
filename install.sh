@@ -50,7 +50,7 @@ echo -ne "${INFO} Setting up configuration... "
 sudo mkdir -p /etc/swaplord
 sudo cp ./config/config.example.yaml /etc/swaplord/config.yaml
 sudo sed -i "s|<INSERT_YOUR_KEY_HERE>|$API_KEY|g" /etc/swaplord/config.yaml
-echo -e "${GREEN}${SUCCESS}${RESET} Config created at /etc/swaplord/config.yaml"
+echo -e "${GREEN}${SUCCESS}${RESET} Config successfull created"
 
 echo -ne "${INFO} Creating log directory... "
 sudo mkdir -p /var/log/swaplord
@@ -62,7 +62,7 @@ echo -e "${GREEN}${SUCCESS}${RESET} Log directory ready at /var/log/swaplord"
 echo -ne "${INFO} Installing SwapLord script... "
 sudo cp ./bin/swaplord.py /usr/local/bin/swaplord
 sudo chmod +x /usr/local/bin/swaplord
-echo -e "${GREEN}${SUCCESS}${RESET} Script installed to /usr/local/bin/swaplord"
+echo -e "${GREEN}${SUCCESS}${RESET} Service Scripts successfully installed"
 
 echo -ne "${INFO} Creating system user '$SWAPUSER'... "
 sudo useradd -r -s /bin/false $SWAPUSER >/dev/null 2>&1 || true
