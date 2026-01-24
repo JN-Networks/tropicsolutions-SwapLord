@@ -1,0 +1,5 @@
+version: "1.0.0"
+api_endpoint: "https://api.jn-networks.net/api/v1/swaplord/metrics"
+api_key: "<INSERT_YOUR_KEY_HERE>"
+interval: 60
+log_file: "/var/log/swaplord.log"
