@@ -1,6 +1,6 @@
 # TropicSolutions - SwapLord
 
-**SwapLord** is a lightweight Linux service that monitors **RAM, CPU, and disk usage** and sends this data to the TropicSolutions-API. SwapLord runs as a daemon in the background, making it ideal for server monitoring and automated infrastructure tracking.
+**SwapLord** is a lightweight Linux service that monitors **RAM, CPU, and disk usage** and sends this data to the TropicSolutions-API. SwapLord runs as a daemon in the background, making it ideal for server monitoring.
 
 ---
 
