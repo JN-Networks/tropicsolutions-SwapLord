@@ -26,11 +26,11 @@ echo -e "${BLUE}========================================${RESET}"
 echo -e "${BLUE}      TropicSolutions SwapLord Installer${RESET}"
 echo -e "${BLUE}========================================${RESET}\n"
 
-echo -e "${INFO} Before you start, make sure you have your API/License Key ready."
+echo -e "${INFO} Before you start, make sure you have your API Key ready."
 echo -e "${INFO} You can see an manual here"
 echo -e "${YELLOW}https://docs.tropicsoltions.net/swaplord/${RESET}\n"
 
-read -p "Enter your API / License Key: " API_KEY
+read -p "Enter your API Key: " API_KEY
 
 read -p "Enter the system user for SwapLord [swaplord]: " SWAPUSER
 SWAPUSER=${SWAPUSER:-swaplord}
@@ -85,4 +85,4 @@ echo -e "${GREEN}${SUCCESS}${RESET} SwapLord service installed and started!\n"
 echo -e "${BLUE}========================================${RESET}"
 echo -e "${GREEN}Installation complete!${RESET} ${SUCCESS}"
 echo -e "${BLUE}Check service status: sudo systemctl status swaplord${RESET}"
-echo -e "${GREEN}You can now visit your service in our dashboard to see the live metrics: https://cp.tropicsolutions.net${RESET}"
+echo -e "${GREEN}Please be note that this is a BETA-Version and you cannot see the live metrics at our dashboard at the moment.${RESET}"
