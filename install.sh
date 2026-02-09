@@ -50,7 +50,7 @@ install_dependencies() {
     fi
 
     echo "📦 Installing Python requirements..."
-    sudo "$PYTHON_PATH" -m pip install -r requirements.txt
+    sudo "$PYTHON_PATH" -m pip install --break-system-packages -r requirements.txt
 }
 install_dependencies &
 spinner $!
