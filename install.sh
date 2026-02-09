@@ -42,14 +42,15 @@ install_dependencies() {
 
     PYTHON_PATH=$(which python3)
 
-    sudo "$PYTHON_PATH" -m pip install --upgrade pip >/dev/null 2>&1
+    sudo "$PYTHON_PATH" -m pip install --upgrade pip
 
-    if [ -f requirements.txt ]; then
-        sudo "$PYTHON_PATH" -m pip install -r requirements.txt >/dev/null 2>&1
-    else
-        echo "requirements.txt fehlt!" >&2
+    if [ ! -f requirements.txt ]; then
+        echo "❌ requirements.txt nicht gefunden!"
         exit 1
     fi
+
+    echo "📦 Installing Python requirements..."
+    sudo "$PYTHON_PATH" -m pip install -r requirements.txt
 }
 install_dependencies &
 spinner $!
