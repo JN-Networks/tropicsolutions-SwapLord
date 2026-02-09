@@ -40,7 +40,7 @@ install_dependencies() {
     sudo apt-get update -qq >/dev/null
     sudo apt-get install -y python3 python3-pip >/dev/null
     sudo pip3 install --upgrade pip >/dev/null 2>&1
-    sudo pip3 install psutil requests pyyaml >/dev/null 2>&1
+    sudo pip3 install -r requirements.txt >/dev/null 2>&1
 }
 install_dependencies &
 spinner $!
