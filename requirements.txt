@@ -1,5 +1,5 @@
 psutil
-yaml
+PyYAML
 time
 requests
 argparse
