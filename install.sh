@@ -42,7 +42,7 @@ install_dependencies() {
 
     PYTHON_PATH=$(which python3)
 
-    sudo "$PYTHON_PATH" -m pip install --upgrade pip
+    sudo "$PYTHON_PATH" -m pip install --upgrade pip --break-system-packages
 
     if [ ! -f requirements.txt ]; then
         echo "❌ requirements.txt nicht gefunden!"
@@ -50,7 +50,7 @@ install_dependencies() {
     fi
 
     echo "📦 Installing Python requirements..."
-    sudo "$PYTHON_PATH" -m pip install --break-system-packages -r requirements.txt
+    sudo "$PYTHON_PATH" -m pip install -r requirements.txt --break-system-packages
 }
 install_dependencies &
 spinner $!
