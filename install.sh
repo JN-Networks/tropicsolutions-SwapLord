@@ -39,8 +39,17 @@ echo -e "${INFO} Installing dependencies..."
 install_dependencies() {
     sudo apt-get update -qq >/dev/null
     sudo apt-get install -y python3 python3-pip >/dev/null
-    sudo pip3 install --upgrade pip >/dev/null 2>&1
-    sudo pip3 install -r requirements.txt >/dev/null 2>&1
+
+    PYTHON_PATH=$(which python3)
+
+    sudo "$PYTHON_PATH" -m pip install --upgrade pip >/dev/null 2>&1
+
+    if [ -f requirements.txt ]; then
+        sudo "$PYTHON_PATH" -m pip install -r requirements.txt >/dev/null 2>&1
+    else
+        echo "requirements.txt fehlt!" >&2
+        exit 1
+    fi
 }
 install_dependencies &
 spinner $!
