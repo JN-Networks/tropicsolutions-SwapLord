@@ -31,6 +31,6 @@
 1. Clone the repository:
    ```bash
    git clone https://github.com/JN-Networks/tropicsolutions-SwapLord.git
-   cd SwapLord
+   cd tropicsolutions-SwapLord
    chmod +x install.sh
    ./install.sh
